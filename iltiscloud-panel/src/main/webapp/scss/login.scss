@@ -1,0 +1,91 @@
+@import 'style';
+
+.login-container {
+	border: 1px solid $white;
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	flex-flow: row;
+	justify-content: center;
+	width: 20em;
+	height: 30em;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+}
+
+.headline-container {
+	position: absolute;
+	height: 3em;
+	font-size: 2em;
+	margin-top: 1em;
+}
+
+.credential-fields {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+
+.credential-field {
+	text-align: left;
+	margin-left: 2em;
+	p {
+		margin: 0;
+	}
+}
+
+.credential-fields>.credential-field {
+	margin-bottom: 5em;
+	~.credential-field {
+		margin-bottom: 0;
+	}
+}
+
+.field-input {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid $white;
+	color: white;
+	width: calc(100% - 2em);
+}
+
+.field-input:focus {
+	outline: none;
+}
+
+.footer-container {
+	position: absolute;
+	left: 0;
+	bottom: 3em;
+	width: 100%;
+}
+
+.error-container {
+	margin-bottom: 1em;
+}
+
+.login-button {
+	background: transparent;
+	border: none;
+	color: white;
+    transition: .3s color;
+}
+
+.login-button:hover {
+    color: $gray-600;
+}
+
+.login-button:focus {
+	outline: none;
+}
+
+.spinner-border {
+	height: 1em;
+	width: 1em;
+	border-width: 2px;
+}

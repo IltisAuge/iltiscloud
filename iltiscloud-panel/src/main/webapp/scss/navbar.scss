@@ -1,0 +1,65 @@
+@import 'style';
+
+#navbar {
+    //position: fixed;
+   // left: 50%;
+    //transform: translateX(-50%);
+    width: 100%;
+}
+
+.navbar {
+    padding-bottom: 0;
+    padding-top: 0;
+    transition: padding-bottom 0.3s;
+}
+
+.navbar:hover {
+    padding-bottom: 3em;
+}
+
+.navbar-nav {
+    width: 50%;
+    justify-content: space-evenly;
+    
+    .nav-item {
+        margin: 1em 2em 1em 2em;
+        
+        .nav-link {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+    }
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    margin-bottom: 1em;
+}
+
+.hr {
+    position: relative;
+    top: -3em;
+    height: 40px;
+    background: $body-bg;
+    transition: height 0.3s;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid white;
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar {
+        padding-bottom: 3em;
+    }
+}

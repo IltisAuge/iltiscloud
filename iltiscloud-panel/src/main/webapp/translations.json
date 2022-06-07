@@ -1,0 +1,355 @@
+{
+	"word.name": {
+        "german": "Name",
+        "english": "Name",
+        "spanish": "Nombre"
+    },
+	"word.status": {
+        "german": "Status",
+        "english": "Status",
+        "spanish": "Estatus"
+    },
+	"word.online": {
+        "german": "Online",
+        "english": "Online",
+        "spanish": "Conectado"
+    },
+	"word.offline": {
+        "german": "Offline",
+        "english": "Offline",
+        "spanish": "Desconectado"
+    },
+	"word.edit": {
+        "german": "Bearbeiten",
+        "english": "Edit",
+        "spanish": "Editar"
+    },
+	"word.uniqueid": {
+        "german": "UniqueId",
+        "english": "UniqueId",
+        "spanish": "UniqueId"
+    },
+	"word.address": {
+        "german": "Adresse",
+        "english": "Address",
+        "spanish": "Dirección IP"
+    },
+	"word.ipaddress": {
+        "german": "IP-Adresse",
+        "english": "IP-Address",
+        "spanish": "Dirección IP"
+    },
+	"word.port": {
+        "german": "Port",
+        "english": "Port",
+        "spanish": "Puerto"
+    },
+	"word.wrapper": {
+        "german": "Wrapper",
+        "english": "Wrapper",
+        "spanish": "Wrapper"
+    },
+	"word.type": {
+        "german": "Typ",
+        "english": "Type",
+        "spanish": "Tipo"
+    },
+	"word.players": {
+        "german": "Spieler",
+        "english": "Players",
+        "spanish": "Jugadores"
+    },
+	"word.uptime": {
+        "german": "Laufzeit",
+        "english": "Uptime",
+        "spanish": "Tiempo de actividad"
+    },
+	"word.start": {
+        "german": "Starten",
+        "english": "Start",
+        "spanish": "Comienzo"
+    },
+	"word.stop": {
+        "german": "Stoppen",
+        "english": "Stop",
+        "spanish": "Parar"
+    },
+	"word.kill": {
+        "german": "Killen",
+        "english": "Kill",
+        "spanish": "Matar"
+    },
+	"word.static": {
+        "german": "Statisch",
+        "english": "Static",
+        "spanish": "Estático"
+    },
+	"word.template": {
+        "german": "Template",
+        "english": "Template",
+        "spanish": "Plantilla"
+    },
+	"word.savesettings": {
+        "german": "Einstellungen speichern",
+        "english": "Save settings",
+        "spanish": "Guardar ajustes"
+    },
+	"word.username": {
+        "german": "Benutzername",
+        "english": "Username",
+        "spanish": "Nombre de usuario"
+    },
+	"word.password": {
+        "german": "Passwort",
+        "english": "Password",
+        "spanish": "Contraseña"
+    },
+	"word.group": {
+        "german": "Gruppe",
+        "english": "Group",
+        "spanish": "Grupo"
+    },
+	"word.language": {
+        "german": "Sprache",
+        "english": "Language",
+        "spanish": "Idioma"
+    },
+	"word.design": {
+        "german": "Design",
+        "english": "Design",
+        "spanish": "Diseño"
+    },
+	"word.dark": {
+        "german": "Dunkel",
+        "english": "Dark",
+        "spanish": "Oscuro"
+    },
+	"word.light": {
+        "german": "Hell",
+        "english": "Light",
+        "spanish": "Luminoso"
+    },
+	"word.maxram": {
+        "german": "Maximaler Arbeitsspeicher",
+        "english": "Maximum memory",
+        "spanish": "Memoria máxima"
+    },
+	"word.platform": {
+        "german": "Platform",
+        "english": "Platform",
+        "spanish": "Plataforma"
+    },
+	
+	"navbar.link.home": {
+        "german": "Start",
+        "english": "Home",
+        "spanish": "Página de inicio"
+    },
+	"navbar.link.wrappers": {
+        "german": "Wrapper",
+        "english": "Wrappers",
+        "spanish": "Wrappers"
+    },
+	"navbar.link.servers": {
+        "german": "Server",
+        "english": "Servers",
+        "spanish": "Servidores"
+    },
+	"navbar.link.settings": {
+        "german": "Einstellungen",
+        "english": "Settings",
+        "spanish": "Ajustes"
+    },
+	
+    "page.login.title": {
+        "german": "Anmeldung | IltisCloud",
+        "english": "Login | IltisCloud",
+        "spanish": "Registrarse | IltisCloud"
+    },
+	"page.login.headline": {
+        "german": "Anmelden",
+        "english": "Login",
+        "spanish": "Registrarse"
+    },
+	"page.login.username": {
+        "german": "Benutzername",
+        "english": "Username",
+        "spanish": "Nombre de usuario"
+    },
+	"page.login.password": {
+        "german": "Passwort",
+        "english": "Password",
+        "spanish": "Contraseña"
+    },
+	"page.login.submit": {
+        "german": "Anmelden",
+        "english": "Login",
+        "spanish": "Registrarse"
+    },
+	"page.login.loggedout": {
+        "german": "Du wurdest abgemeldet.",
+        "english": "You have logged out.",
+        "spanish": "Has cerrado la sesión."
+    },
+	"page.login.invalidlogin": {
+        "german": "Deine Anmeldedaten stimmen nicht überein.",
+        "english": "Your credentials do not match.",
+        "spanish": "Tus credenciales no coinciden."
+    },
+	
+    "page.home.title": {
+        "german": "Start | IltisCloud",
+        "english": "Home | IltisCloud",
+        "spanish": "Página de inicio | IltisCloud"
+    },
+	"page.home.headline": {
+        "german": "Willkommen {0}!",
+        "english": "Welcome {0}!",
+        "spanish": "Bienvenidos {0}!"
+    },
+	
+	"page.wrappers.title": {
+        "german": "Wrapper | IltisCloud",
+        "english": "Wrappers | IltisCloud",
+        "spanish": "Wrappers | IltisCloud"
+    },
+	"page.wrappers.headline": {
+        "german": "Zeige alle Wrapper",
+        "english": "Showing all wrappers",
+        "spanish": "Mostrando todos los wrappers"
+    },
+	"page.wrappers.createwrapper": {
+        "german": "Neuen Wrapper erstellen",
+        "english": "Create new wrapper",
+        "spanish": "Crear nuevo wrapper"
+    },
+	
+	"page.wrapper.title": {
+        "german": "Wrapper-{0} | IltisCloud",
+        "english": "Wrapper-{0} | IltisCloud",
+        "spanish": "Wrapper-{0} | IltisCloud"
+    },
+	"page.wrapper.headline": {
+        "german": "Zeige {0}",
+        "english": "Showing {0}",
+        "spanish": "Mostrando {0}"
+    },
+	
+	"console.cmdinput.placeholder": {
+        "german": "Befehl...",
+        "english": "Command...",
+        "spanish": "Mandado..."
+    },
+	"console.submitbtn.value": {
+        "german": "Ausführen",
+        "english": "Execute",
+        "spanish": "Ejecutar"
+    },
+	
+	"page.servers.title": {
+        "german": "Server | IltisCloud",
+        "english": "Servers | IltisCloud",
+        "spanish": "Servidores | IltisCloud"
+    },
+	"page.servers.headline": {
+        "german": "Zeige alle Server",
+        "english": "Showing all servers",
+        "spanish": "Mostrando todos los servidores"
+    },
+	"page.servers.createserver": {
+        "german": "Neuen Server erstellen",
+        "english": "Create new server",
+        "spanish": "Crear nuevo servidor"
+    },
+	
+	"page.server.title": {
+        "german": "Server {0} | IltisCloud",
+        "english": "Servers {0} | IltisCloud",
+        "spanish": "Servidores {0} | IltisCloud"
+    },
+	"page.server.title.notfound": {
+        "german": "Server nicht gefunden | IltisCloud",
+        "english": "Server not found | IltisCloud",
+        "spanish": "Servidor no encontrado | IltisCloud"
+    },
+	"page.server.headline": {
+        "german": "Zeige Server '{0}'",
+        "english": "Showing server '{0}'",
+        "spanish": "Mostrando el servidor '{0}'"
+    },
+	"page.server.headline.notfound": {
+        "german": "Server wurde nicht gefunden!",
+        "english": "Server was not found!",
+        "spanish": "¡No se encontró el servidor!"
+    },
+	
+    "page.createserver.title": {
+        "german": "Server erstellen | IltisCloud",
+        "english": "Create server | IltisCloud",
+        "spanish": "Crear servidor | IltisCloud"
+    },
+	"page.createserver.headline": {
+        "german": "Erstellen eines neuen Servers",
+        "english": "Create a new server",
+        "spanish": "Crear un nuevo servidor"
+    },
+	"page.createserver.submitbtn.value": {
+        "german": "Server erstellen",
+        "english": "Create server",
+        "spanish": "Crear el servidor"
+    },
+	
+    "page.createwrapper.title": {
+        "german": "Wrapper erstellen | IltisCloud",
+        "english": "Create wrapper | IltisCloud",
+        "spanish": "Crear wrapper | IltisCloud"
+    },
+	"page.createwrapper.headline": {
+        "german": "Erstellen eines neuen Wrappers",
+        "english": "Create a new wrapper",
+        "spanish": "Crear un nuevo wrapper"
+    },
+	"page.createwrapper.submitbtn.value": {
+        "german": "Wrapper erstellen",
+        "english": "Create wrapper",
+        "spanish": "Crear el wrapper"
+    },
+	
+    "page.editserver.title": {
+        "german": "Server bearbeiten | IltisCloud",
+        "english": "Edit server | IltisCloud",
+        "spanish": "Editar servidor | IltisCloud"
+    },
+	"page.editserver.headline": {
+        "german": "Bearbeiten des Servers '{0}'",
+        "english": "Edit server '{0}'",
+        "spanish": "Editar el servidor '{0}'"
+    },
+	
+    "page.editwrapper.title": {
+        "german": "Wrapper bearbeiten | IltisCloud",
+        "english": "Edit wrapper | IltisCloud",
+        "spanish": "Editar wrapper | IltisCloud"
+    },
+	"page.editwrapper.headline": {
+        "german": "Bearbeiten des Wrappers '{0}'",
+        "english": "Edit wrapper '{0}'",
+        "spanish": "Editar el wrapper '{0}'"
+    },
+	
+	"page.settings.title": {
+        "german": "Einstellungen | IltisCloud",
+        "english": "Settings | IltisCloud",
+        "spanish": "Ajustes | IltisCloud"
+    },
+	"page.settings.headline": {
+        "german": "Einstellungen",
+        "english": "Settings",
+        "spanish": "Ajustes"
+    },
+	"page.settings.submitbtn.value": {
+        "german": "Einstellungen speichern",
+        "english": "Save settings",
+        "spanish": "Ajustes"
+    }
+}

@@ -1,0 +1,91 @@
+<!--<%@page import="de.iltisauge.iltiscloud.api.clouduser.ICloudUser"%>
+<%@page import="de.iltisauge.iltiscloud.panel.IltisCloud"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="compiled/css/login.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/tools.js"></script>
+        <script src="js/translations.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="login-container">
+				<div class="headline-container" id="login-headline"></div>
+				<form id="login-form">
+					<div class="credential-fields">
+						<div class="credential-field">
+							<p class="field-headline" id="login-username"></p>
+							<input id="username-input" class="field-input" type="text"
+								required="required" />
+						</div>
+						<div class="credential-field">
+							<p class="field-headline" id="login-password"></p>
+							<input id="password-input" class="field-input" type="password"
+								required="required" />
+						</div>
+					</div>
+					<div class="footer-container">
+						<!--<%
+						final String error = request.getParameter("error");
+						if (error == null) { %>
+							<div id="error-container" class="error-container" style="color: white;"></div>
+						<%
+						} else if (error.equals("1")) { %>
+							<div class="error-container" style="color: green;">Sie wurden abgemeldet!</div>
+						<%
+						}
+						%>-->
+						<input class="login-button" id="login-submit" type="submit">
+						<div id="spinner-border" class="spinner-border" role="status"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            loadTranslations();
+            setTimeout(function() {
+                document.title = getTranslation("page.login.title", language);
+                $('#login-headline').html(getTranslation("page.login.headline", language));
+                $('#login-username').html(getTranslation("page.login.username", language));
+                $('#login-password').html(getTranslation("page.login.password", language));
+                $('#login-submit').attr("value", getTranslation("page.login.submit", language));
+            }, 100);
+        });
+        
+		$('#spinner-border').hide();
+		$('#login-form').submit(function(event) {
+			event.preventDefault();
+			createErrorMessage(" ", "white");
+			$('#spinner-border').show();
+			let username = $('#username-input').val();
+			let password = $('#password-input').val();
+			var request = $.get("checklogin.jsp", { user: username, pw: password });
+			request.done(function(data) {
+				console.log("data=" + data);
+				if (data.includes("FAILED")) {
+					console.log("FAILED");
+					$('#spinner-border').hide();
+					$('#username-input').val('');
+					$('#password-input').val('');
+					createErrorMessage("Ungültige Anmeldedaten!", "red");
+				} else if (data.includes("SUCCESS")) {
+					console.log("SUCCESS");
+					window.location.href = "/home.jsp";
+				}
+			});
+		});
+		
+		function createErrorMessage(message, c) {
+			var element = document.getElementById('error-container');
+			console.log("element=" + element);
+			element.innerHTML = message;
+			element.style.color = c;
+		}
+	</script>
+</html>

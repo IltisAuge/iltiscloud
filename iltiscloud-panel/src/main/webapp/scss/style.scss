@@ -1,0 +1,110 @@
+@import 'custom-bootstrap';
+
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	color: $white;
+	background-color: $body-bg;
+}
+
+* {
+    font-family: Consolas, sans-serif !important;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+}
+
+.page-title {
+    margin-bottom: 30px;
+}
+
+.page-headline {
+    color: $white;
+    font-size: 2em;
+    margin: 0;
+    text-align: left;
+}
+
+#page-header {
+    width: 100%;
+}
+
+#page-body {
+    top: 200px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+    opacity: .5;
+    border-top: 1px solid white;
+}
+
+td input, td select {
+    width: 100%;
+}
+
+td {
+    word-wrap: break-word;
+    vertical-align: middle;
+}
+
+.link {
+    text-decoration: none;
+    color: $white;
+    transition: .3s color;
+}
+
+.link:hover {
+    color: $gray-600;
+}
+
+.ipt {
+    background: transparent;
+    color: $white;
+    border: none;
+}
+
+.ipt:focus {
+    outline: none;
+}
+
+.input-select, option {
+    background-color: $body-bg;
+    color: $white;
+    border: none;
+}
+
+option:hover {
+    background-color: $body-bg;
+}
+
+.input-select:active {
+    outline: none;
+}
+
+.attributes-container {
+    div {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+}
+
+.ipt {
+    border-bottom: 1px solid $white !important;
+}
+
+@media only screen and (max-width: 992px) {
+    #page-body {
+        top: 550px;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../compiled/css/server.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="../js/tools.js"></script>
+        <script src="../js/translations.js"></script>
+		<script src="../js/ClientToMaster.js"></script>
+		<script src="../js/ClientToServer.js"></script>
+        <script src="../js/pageLoad.js"></script>
+	</head>
+	<body>
+        <div id="page-header" style="opacity: 0;"></div>
+        <div id="page-body" style="opacity: 0;">
+            <div class="col-md-6">
+                <div class="page-title">
+                    <p class="page-headline" id="server-headline"></p>
+                    <hr>
+                </div>
+	            	<div style="display: flex;">
+	                    <div class="server-info-container">
+	                        <div><span class="word-name"></span>: server.getName()</div>
+	                        
+	                        <div><span class="word-type"></span>: s</div>
+	                        <div><span class="word-uniqueid"></span>:server.getServerId().toString()</div>
+	                        <div><span class="word-address"></span>: server.getAddress().toString()</div>
+	                        <div><span class="word-wrapper"></span>: server.getWrapper().getName()</div>
+	                        <div><span class="word-status"></span>: <span class='text-<%= server.isRunning() ? "success" : "danger"%> word-<%= server.isRunning() ? "online" : "offline" %>'></span></div>
+	                        <div><span class="word-players"></span>: -</div>
+	                        <div><span class="word-uptime"></span>: 
+	                        	<script type="text/javascript">
+	                        	</script>
+	                        </div>
+	                        <div class="server-actions-container d-flex flex-column" style="gap: 10px;">
+	                            <a class="btn btn-success word-edit" href="editserver?serverId=<%= serverIdString %>"></a>
+	                            <button class="btn btn-success word-start" onclick="startServer()"></button>
+	                            <button class="btn btn-warning word-stop" onclick="stopServer()"></button>
+	                            <button class="btn btn-danger word-kill" onclick="killServer()"></button>
+	                        </div>
+						</div>
+	                    <div class="console-container d-flex flex-column">
+	                        <div class="console-text-container" id="console-text-container">
+	                        	<canvas id="console-canvas">
+	                        	</canvas>
+	                        </div>
+	                        <div class="command-line-container">
+	                            <form id="execute-cmd-form" method="post">
+	                                <div class="inner-form-container d-flex">
+	                                    <div>
+	                                        <input class="ipt cmd-input" id="cmd-input" type="text" value="test">
+	                                    </div>
+	                                    <div>
+	                                        <input class="submit-cmd-btn btn-success" id="submit-cmd-bnt" type="submit">
+	                                    </div>
+	                                </div>
+	                            </form>
+	                        </div>
+	                    </div>
+	                </div>
+            </div>
+        </div>
+	    <script src="../js/Console.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                setTimeout(function() {
+                    document.title = getTranslation("page.server.title", '<%= serverName %>');
+                    $('#server-headline').html(getTranslation("page.server.headline", '<%= serverName %>'));
+                    $('#cmd-input').attr("placeholder", getTranslation("console.cmdinput.placeholder"));
+                    $('#submit-cmd-btn').attr("value", getTranslation("console.submitbtn.value"));
+                }, 100);
+
+	                initConsole();
+	                
+	                var textIndex = 0;
+	                function setCanvasText(text) {
+	                	var ctx = console_canvas.getContext('2d');
+	                	var fontSize = 12;
+	                	ctx.font = fontSize + "px Consolas";
+	                	ctx.fillStyle = "white";
+	                	var h = ctx.measureText(text).height;
+	                	ctx.fillText(text, 5, 15 + fontSize * textIndex);
+	                	textIndex++;
+	                };
+	                
+	                var _onMessageFromServer = onMessageFromServer;
+	                onMessageFromServer = function(event) {
+	                	_onMessageFromServer(event);
+	                	setCanvasText(event.data);
+	                };
+	            
+                var form = $('#execute-cmd-form');
+                form.submit(function(e) {
+                   	e.preventDefault();
+    	           	 let serialized = { };
+    	               form.serializeArray().map(function(v) {
+    	                   serialized[v.name] = v.value;
+    	               });
+                   	console.log(serialized);
+                   	var cmd = $('#cmd-input').val();
+                   	$.post("executeServerCommand.jsp?serverId=<%= serverIdString %>&command=" + cmd);
+                });
+            });
+        </script>
+	</body>
+</html>

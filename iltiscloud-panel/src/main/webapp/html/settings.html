@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="compiled/css/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="js/tools.js"></script>
+        <script src="js/translations.js"></script>
+        <script src="js/pageLoad.js"></script>
+	</head>
+	<body>
+        <div id="page-header" style="opacity: 0;"></div>
+        <div id="page-body" style="opacity: 0;">
+            <div class="col-md-6">
+                <div class="page-title">
+                    <p class="page-headline" id="settings-headline"></p>
+                    <hr>
+                </div>
+                <form target="settings.jsp?action='save'" method="post">
+                    <div class="attributes-container" style="display: flex; flex-direction: column;">
+                        <div>
+                            <span class="word-username"></span>: <input class="ipt" type="text" name="name" value="IltisAuge">
+                        </div>
+                        <div>
+                            <span class="word-password"></span>: <input class="ipt" type="password" name="name" value="*********">
+                        </div>
+                        <div>
+                            <span class="word-group"></span>:
+                            <select class="ipt" name="group">
+                                <option value="admin" selected="selected">Admin</option>
+                                <option value="moderator">Moderator</option>
+                                <option value="default">Default</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span class="word-language"></span>:
+                            <select class="ipt" name="language">
+                                <option value="german" selected="selected">Deutsch</option>
+                                <option value="english">English</option>
+                                <option value="spanisch">Español</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span class="word-design"></span>:
+                            <select class="ipt" name="design">
+                                <option class="word-dark" value="dark" selected="selected">Dunkel</option>
+                                <option class="word-light" value="light">Hell</option>
+                            </select>
+                        </div>
+                         <div class="d-flex" style="justify-content: flex-end;">
+                            <input class="btn btn-success" id="submit-btn" type="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                setTimeout(function() {
+                    document.title = getTranslation("page.settings.title");
+                    $('#settings-headline').html(getTranslation("page.settings.headline"));
+                    $('#submit-btn').attr("value", getTranslation("word.savesettings"));
+                    setTimeout(function() {
+                        $('#navbar-link-settings').attr("href", "#");
+                    }, 50);
+                }, 100);
+            });
+        </script>
+	</body>
+</html>

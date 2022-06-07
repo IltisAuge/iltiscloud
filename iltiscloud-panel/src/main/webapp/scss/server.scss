@@ -1,0 +1,56 @@
+@import 'style';
+
+.server-info-container {
+    height: 100%;
+    text-align: start;
+    
+    div {
+        margin-bottom: 10px;
+    }
+}
+
+.console-container {
+    border: 1px solid white;
+    height: 500px;
+    width: 100%;
+}
+
+.console-text-container {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+	
+	canvas {
+		overflow-x: hidden;
+	}
+}
+
+.command-line-container {
+    position: relative;
+    border-top: 1px solid white;
+    
+    form, .inner-form-container {
+        height: 100%;
+    }
+    
+    .inner-form-container {
+        
+        .ipt {
+            border: none !important;
+        }
+        
+        div:first-child, .cmd-input {
+            width: 100%;
+        }
+        
+        div:last-child {
+            margin-left: auto;
+        } 
+    }
+    
+    .submit-cmd-btn {
+        border: none;
+        height: 100%;
+    }
+}

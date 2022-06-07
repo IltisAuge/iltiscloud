@@ -1,0 +1,16 @@
+<%@page import="de.iltisauge.iltiscloud.panel.IltisCloud"%>
+<%@page import="de.iltisauge.iltiscloud.api.clouduser.ICloudUser"%>
+<%@page import="de.iltisauge.iltiscloud.api.utils.HashUtil"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+final String username = request.getParameter("user");
+final String password = request.getParameter("pw");
+final String passwordHash = HashUtil.sha512(password);
+final ICloudUser cloudUser = IltisCloud.getAPI().getCloudUserManager().getCloudUser(username);
+if (cloudUser == null || !cloudUser.getPasswordHash().equals(passwordHash)) {
+	out.write("FAILED");
+	return;
+}
+out.write("SUCCESS");
+%>
